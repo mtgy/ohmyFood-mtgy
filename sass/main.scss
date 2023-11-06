@@ -13,19 +13,8 @@
                 }
  }
 
- .location {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem 0;
-    background-color: var(--third-bg-color);
-    &__i {
-        padding: 0 1rem ;
-    }
-}
-
- .navbar {
+ 
+ .fonctionnement {
     display: grid;
     
     @media (min-width: 996px) {
@@ -65,7 +54,11 @@
         grid-template-columns: 1fr 1fr ;
         gap:  2rem 6rem
             }
-   
+   a {
+    justify-self: center;
+    width: 100%;
+  max-width: 360px;
+   }
     .card-tag {
         background-color: var(--secondary-color);
         color: var(--secondary-color-darker);
