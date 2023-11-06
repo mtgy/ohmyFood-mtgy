@@ -1,0 +1,11 @@
+.header {
+    text-align: center;
+
+    background-color:  var(--second-bg-color);
+    &__img {
+        padding:  1rem 0;
+    }
+     @include header-shadow;
+  
+}
+

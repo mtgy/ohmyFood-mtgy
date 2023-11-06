@@ -1,0 +1,106 @@
+.section {
+        padding: 3rem ;
+        @media (min-width: 996px) {
+            padding: 3rem 11rem;
+                }
+        
+        &--txt-center{
+            text-align: center;
+        }
+        &--bg-blanc {
+                 background-color:  var(--second-bg-color); 
+
+                }
+ }
+
+ .location {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+    background-color: var(--third-bg-color);
+    &__i {
+        padding: 0 1rem ;
+    }
+}
+
+ .navbar {
+    display: grid;
+    
+    @media (min-width: 996px) {
+    grid-template-columns: 1fr 1fr 1fr;
+
+        }
+
+    &__btn {
+        background-color: var(--main-bg-color);
+        border-radius: 15px;
+        display: inline-flex;
+        align-items: center;
+        justify-self: center;
+        width: 290px;
+        &__item {
+            margin: 0 9px;
+        }
+        span {
+            border-radius: 20px;
+            background-color: var(--primary-color);
+            padding: 3px 9px;
+            color: var(--second-bg-color);
+            margin-left: -50px;
+
+        }
+        i {
+            color: var(--grey-bg-color);
+        }
+    }
+ }
+
+ .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    @media (min-width: 996px) {
+        grid-template-columns: 1fr 1fr ;
+        gap:  2rem 6rem
+            }
+   
+    .card-tag {
+        background-color: var(--secondary-color);
+        color: var(--secondary-color-darker);
+        padding: 5px 12px;
+        position: relative;
+        float: right;
+        top: 51px;
+        margin-top: -29px;
+        right: 21px;
+    }  
+    .card {
+        background-color: var(--second-bg-color);
+        border-radius: 12px;
+        @include btn-shadow;
+
+            .card-img {
+                border-radius: 12px 12px 0px 0px;
+                 object-fit: cover;
+                 height: 180px;
+                 width: 100%;
+
+            }
+            .card-content {
+                display: grid;
+                grid-template-columns: 5fr 1fr;
+                padding: 1rem;
+                .icon-fav {
+                    text-align: right;
+                    font-size: 2rem;
+
+                  }
+                .fa-solid{
+                    color: var(--primary-color);
+                }
+            }
+    }
+}
+
