@@ -104,6 +104,12 @@ a:visited {
   background: var(--primary-gradient);
   color: var(--second-bg-color);
   border-radius: 25px;
+  transition-property: transform;
+  transition-duration: 1000ms;
+}
+.btn--gradient:hover {
+  transform: scale(1.05);
+  opacity: 0.8;
 }
 
 .header {
@@ -192,6 +198,7 @@ a:visited {
   top: 51px;
   margin-top: -29px;
   right: 21px;
+  box-shadow: 0 0.55rem 0.55rem rgba(0, 0, 0, 0.5);
 }
 .container .card {
   justify-self: center;

@@ -51,6 +51,12 @@ a:visited{
               background: var(--primary-gradient);
               color: var(--second-bg-color);
               border-radius: 25px;
+              transition-property: transform;
+              transition-duration: 1000ms;
+              &:hover {
+                transform: scale(1.05);
+                opacity: 0.8;
+            }
             }
   padding: 15px 35px;
   border: 0;
