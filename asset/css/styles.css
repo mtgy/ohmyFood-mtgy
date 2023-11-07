@@ -183,11 +183,6 @@ a:visited {
     gap: 2rem 6rem;
   }
 }
-.container a {
-  justify-self: center;
-  width: 100%;
-  max-width: 360px;
-}
 .container .card-tag {
   background-color: var(--secondary-color);
   color: var(--secondary-color-darker);
@@ -199,6 +194,9 @@ a:visited {
   right: 21px;
 }
 .container .card {
+  justify-self: center;
+  width: 100%;
+  max-width: 360px;
   background-color: var(--second-bg-color);
   border-radius: 12px;
   box-shadow: 0 0.55rem 0.55rem rgba(0, 0, 0, 0.5);
@@ -214,12 +212,13 @@ a:visited {
   grid-template-columns: 5fr 1fr;
   padding: 1rem;
 }
-.container .card .card-content .icon-fav {
-  text-align: right;
-  font-size: 2rem;
+.container .card .card-content a.icon-fav {
+  height: 40px;
+  justify-self: right;
+  content: url("../img/heart-regular.svg");
 }
-.container .card .card-content .fa-solid {
-  color: var(--primary-color);
+.container .card .card-content a.icon-fav:focus {
+  content: url("../img/heart-solid.svg");
 }
 
 footer {

@@ -54,11 +54,7 @@
         grid-template-columns: 1fr 1fr ;
         gap:  2rem 6rem
             }
-   a {
-    justify-self: center;
-    width: 100%;
-  max-width: 360px;
-   }
+
     .card-tag {
         background-color: var(--secondary-color);
         color: var(--secondary-color-darker);
@@ -70,6 +66,9 @@
         right: 21px;
     }  
     .card {
+        justify-self: center;
+        width: 100%;
+        max-width: 360px;
         background-color: var(--second-bg-color);
         border-radius: 12px;
         @include btn-shadow;
@@ -85,15 +84,15 @@
                 display: grid;
                 grid-template-columns: 5fr 1fr;
                 padding: 1rem;
-                .icon-fav {
-                    text-align: right;
-                    font-size: 2rem;
-
+                a.icon-fav {
+                    height: 40px;
+                    justify-self: right;
+                    content: url("../img/heart-regular.svg");
+                        &:focus {
+                            content: url("../img/heart-solid.svg");
+                        }  
                   }
-                .fa-solid{
-                    color: var(--primary-color);
-                }
-            }
+             }
     }
 }
 
