@@ -73,7 +73,6 @@ h2 {
 
 h3 {
   font-weight: 700;
-  font-size: 18px;
   line-height: 1.5;
 }
 
@@ -258,14 +257,25 @@ a.icon-fav:focus {
 }
 
 .resto section {
+  max-width: 1200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   border-radius: 42px 42px 0 0;
-  top: -2rem;
+  margin-top: -4rem;
   position: relative;
   padding: 2.2rem 1rem;
 }
 .resto-title {
   display: grid;
   grid-template-columns: 5fr 1fr;
+}
+@media (min-width: 768px) {
+  .resto-title {
+    max-width: 270px;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 .resto-title h1 {
   font-family: "Shrikhand", serif;
@@ -278,7 +288,14 @@ a.icon-fav:focus {
   width: 40px;
   padding-bottom: 5px;
 }
-.resto .card-content {
+.resto article {
+  margin-top: 2rem;
+  max-width: 590px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-content {
   background-color: var(--second-bg-color);
   border-radius: 15px;
   padding: 10px;
@@ -286,28 +303,37 @@ a.icon-fav:focus {
   overflow: hidden;
   box-shadow: 0 0.55rem 0.55rem rgba(0, 0, 0, 0.5);
 }
-.resto .card-content .card-txt {
+.card-content .card-txt {
   display: grid;
-  grid-template-columns: 5fr 1fr;
+  grid-template-columns: 8fr 1fr;
 }
-.resto .card-content .card-title {
+.card-content p {
+  font-size: 15px;
+}
+.card-content .card-title {
   grid-column: 1;
   grid-row: 1;
 }
-.resto .card-content .card-subtitle {
+.card-content .card-subtitle {
   grid-column: 1;
   grid-row: 2;
 }
-.resto .card-content .price {
+.card-content .price {
   grid-column: 2;
   grid-row: 2;
+  font-size: 15px;
+  color: var(--black-bg-color);
 }
-.resto .card-content .check {
+.card-content .check {
   grid-column: 3;
   grid-row: span 2;
   align-self: center;
   justify-self: center;
   display: none;
+}
+
+.commander {
+  text-align: center;
 }
 
 footer {
