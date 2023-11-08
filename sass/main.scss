@@ -3,8 +3,8 @@
         &--txt-center{
             text-align: center;
         }
-        &--bg-blanc {
-            background-color:  var(--second-bg-color); 
+        &--bg-gris {
+            background-color: var(--main-bg-color);
         }
 
         @media (min-width: 768px) {
@@ -65,7 +65,7 @@
         grid-template-columns: 1fr 1fr ;
         gap:  2rem 6rem
     }
-   
+   }
     .card-tag {
         background-color: var(--secondary-color);
         color: var(--secondary-color-darker);
@@ -100,15 +100,7 @@
                 display: grid;
                 grid-template-columns: 5fr 1fr;
                 padding: 1rem;
-                a.icon-fav {
-                    height: 40px;
-                    justify-self: right;
-                    content: url("../img/heart-regular.svg");
-                        &:focus {
-                            content: url("../img/heart-solid.svg");
-                        }  
-                  }
-             }
+                
     }
 }
 

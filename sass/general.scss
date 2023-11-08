@@ -14,8 +14,7 @@
   }
 
 body {
-    background-color: var(--main-bg-color);
-    font-family: 'Roboto', sans-serif;
+      font-family: 'Roboto', sans-serif;
   /*  font-family: 'Shrikhand', serif; */
 }
 
@@ -64,4 +63,13 @@ a:visited{
   font-size: 16px;
   margin-top: 15px;
   @include btn-shadow;
+}
+
+a.icon-fav {
+  height: 33px;
+  justify-self: right;
+  content: url("../img/heart-regular.svg");
+      &:focus {
+          content: url("../img/heart-solid.svg");
+      }  
 }

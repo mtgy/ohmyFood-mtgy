@@ -1,13 +1,23 @@
 .header {
     text-align: center;
-
     background-color:  var(--second-bg-color);
     &__img {
         padding:  1rem 0;
     }
    
+    /* bouton retour du header */
+
+    .btn-return {
+            position: absolute;
+            margin: 1.5rem;
+            font-size: 21px;
+            color: var(--black-bg-color);
+    }
     @include header-shadow;
 }
+
+
+
 .location {
     display: flex;
     width: 100%;

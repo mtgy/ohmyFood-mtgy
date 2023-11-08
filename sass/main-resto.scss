@@ -1,0 +1,69 @@
+  .resto {
+   
+    section {
+        border-radius: 42px 42px 0 0;
+        top: -2rem;
+        position: relative;
+        padding: 2.2rem 1rem;
+    }
+        &-title {
+            display: grid;
+            grid-template-columns: 5fr 1fr;
+            h1 {
+                font-family: 'Shrikhand', serif;
+                font-weight: 500;
+            }
+
+    }
+    h2 {
+    font-size: 16px;
+    text-transform: uppercase;
+    border-bottom: solid 2px  var(--secondary-color);
+    width: 40px;
+    padding-bottom: 5px;
+
+    }
+
+
+
+    .card-content  {
+      
+        background-color: var( --second-bg-color);
+        border-radius: 15px;
+        padding: 10px;
+        margin: 10px 0;
+        overflow: hidden;
+        @include btn-shadow;
+
+      .card-txt {
+        display: grid;
+        grid-template-columns: 5fr 1fr;
+      }
+   
+        .card-title{
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+        .card-subtitle{
+         grid-column: 1;
+          grid-row: 2;
+    }
+
+        .price{
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+        .check{
+        grid-column: 3;
+        grid-row: span 2;
+        align-self: center;
+        justify-self: center;
+        display: none;
+    }
+
+}
+
+}
+

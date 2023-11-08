@@ -57,7 +57,6 @@ td, th {
 }
 
 body {
-  background-color: var(--main-bg-color);
   font-family: "Roboto", sans-serif;
   /*  font-family: 'Shrikhand', serif; */
 }
@@ -112,13 +111,29 @@ a:visited {
   opacity: 0.8;
 }
 
+a.icon-fav {
+  height: 33px;
+  justify-self: right;
+  content: url("../img/heart-regular.svg");
+}
+a.icon-fav:focus {
+  content: url("../img/heart-solid.svg");
+}
+
 .header {
   text-align: center;
   background-color: var(--second-bg-color);
+  /* bouton retour du header */
   box-shadow: 0 0.55rem 0.55rem rgba(0, 0, 0, 0.5);
 }
 .header__img {
   padding: 1rem 0;
+}
+.header .btn-return {
+  position: absolute;
+  margin: 1.5rem;
+  font-size: 21px;
+  color: var(--black-bg-color);
 }
 
 .location {
@@ -139,8 +154,8 @@ a:visited {
 .section--txt-center {
   text-align: center;
 }
-.section--bg-blanc {
-  background-color: var(--second-bg-color);
+.section--bg-gris {
+  background-color: var(--main-bg-color);
 }
 @media (min-width: 768px) {
   .section {
@@ -204,7 +219,8 @@ a:visited {
     gap: 2rem 6rem;
   }
 }
-.container .card-tag {
+
+.card-tag {
   background-color: var(--secondary-color);
   color: var(--secondary-color-darker);
   padding: 5px 12px;
@@ -215,7 +231,8 @@ a:visited {
   right: 21px;
   box-shadow: 0 0.55rem 0.55rem rgba(0, 0, 0, 0.5);
 }
-.container .card {
+
+.card {
   justify-self: center;
   width: 100%;
   max-width: 360px;
@@ -224,28 +241,73 @@ a:visited {
   box-shadow: 0 0.55rem 0.55rem rgba(0, 0, 0, 0.5);
 }
 @media (min-width: 999px) {
-  .container .card {
+  .card {
     max-width: 570px;
   }
 }
-.container .card .card-img {
+.card .card-img {
   border-radius: 12px 12px 0px 0px;
   object-fit: cover;
   height: 180px;
   width: 100%;
 }
-.container .card .card-content {
+.card .card-content {
   display: grid;
   grid-template-columns: 5fr 1fr;
   padding: 1rem;
 }
-.container .card .card-content a.icon-fav {
-  height: 40px;
-  justify-self: right;
-  content: url("../img/heart-regular.svg");
+
+.resto section {
+  border-radius: 42px 42px 0 0;
+  top: -2rem;
+  position: relative;
+  padding: 2.2rem 1rem;
 }
-.container .card .card-content a.icon-fav:focus {
-  content: url("../img/heart-solid.svg");
+.resto-title {
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+}
+.resto-title h1 {
+  font-family: "Shrikhand", serif;
+  font-weight: 500;
+}
+.resto h2 {
+  font-size: 16px;
+  text-transform: uppercase;
+  border-bottom: solid 2px var(--secondary-color);
+  width: 40px;
+  padding-bottom: 5px;
+}
+.resto .card-content {
+  background-color: var(--second-bg-color);
+  border-radius: 15px;
+  padding: 10px;
+  margin: 10px 0;
+  overflow: hidden;
+  box-shadow: 0 0.55rem 0.55rem rgba(0, 0, 0, 0.5);
+}
+.resto .card-content .card-txt {
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+}
+.resto .card-content .card-title {
+  grid-column: 1;
+  grid-row: 1;
+}
+.resto .card-content .card-subtitle {
+  grid-column: 1;
+  grid-row: 2;
+}
+.resto .card-content .price {
+  grid-column: 2;
+  grid-row: 2;
+}
+.resto .card-content .check {
+  grid-column: 3;
+  grid-row: span 2;
+  align-self: center;
+  justify-self: center;
+  display: none;
 }
 
 footer {
