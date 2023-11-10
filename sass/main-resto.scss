@@ -1,6 +1,5 @@
 
-  
-  .resto {
+.resto {
    
     section {
         max-width: 1200px;
@@ -13,7 +12,7 @@
         padding: 2.2rem 1rem;
     }
 
-           &-title {
+    &-title {
             display: grid;
             grid-template-columns: 5fr 1fr;
             @media (min-width: 768px) {
@@ -27,67 +26,70 @@
             }
 
     }
-    h2 {
-    font-size: 16px;
-    text-transform: uppercase;
-    border-bottom: solid 2px  var(--secondary-color);
-    width: 40px;
-    padding-bottom: 5px;
 
+    h2 {
+        font-size: 16px;
+        text-transform: uppercase;
+        border-bottom: solid 2px  var(--secondary-color);
+        width: 40px;
+      padding-bottom: 5px;
     }
-article {
-    margin-top: 2rem;
-    max-width: 590px;
-  margin-left: auto;
-  margin-right: auto;
-}
-}
-    .card-content  {
-      
+
+    article {
+        margin-top: 2rem;
+        max-width: 590px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .card-content a {
         background-color: var( --second-bg-color);
         border-radius: 15px;
-        padding: 10px;
         margin: 10px 0;
         overflow: hidden;
+        display: flex;
         @include btn-shadow;
-
+       &:hover > .check {
+          margin-right: 0;
+        }
+    
+    }
       .card-txt {
-        display: grid;
-        grid-template-columns: 8fr 1fr;
-      }
+        flex: 70 1 auto;
+        padding: 10px;
+       }
       p {
         font-size: 15px;
       }
    
-        .card-title{
-        grid-column: 1;
-        grid-row: 1;
-    }
-
-        .card-subtitle{
-         grid-column: 1;
-          grid-row: 2;
-    }
 
         .price{
-        grid-column: 2;
-        grid-row: 2;
+          flex: 2 1 auto;
         font-size: 15px;
         color: var( --black-bg-color);
+        align-self: end;
+        margin-right: 1rem;
     }
 
         .check{
-        grid-column: 3;
-        grid-row: span 2;
-        align-self: center;
-        justify-self: center;
-        display: none;
-    }
+          flex: 0 1 auto;
+          align-self: center;
+          justify-self: center;
+          padding: 22px;
+          background-color: var(--secondary-color);
+          i {
+            color:var(--secondary-color);
+            border-radius: 11px;
+            background-color: rgb(255, 255, 255);
+           padding: 4px;
+            }
+            margin-right: -72px;
 
-}
+          
+         }
+        
 .commander {
 text-align: center;
 }
 
-
-
+}

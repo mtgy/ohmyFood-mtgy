@@ -294,45 +294,46 @@ a.icon-fav:focus {
   margin-left: auto;
   margin-right: auto;
 }
-
-.card-content {
+.resto .card-content a {
   background-color: var(--second-bg-color);
   border-radius: 15px;
-  padding: 10px;
   margin: 10px 0;
   overflow: hidden;
+  display: flex;
   box-shadow: 0 0.55rem 0.55rem rgba(0, 0, 0, 0.5);
 }
-.card-content .card-txt {
-  display: grid;
-  grid-template-columns: 8fr 1fr;
+.resto .card-content a:hover > .check {
+  margin-right: 0;
 }
-.card-content p {
+.resto .card-txt {
+  flex: 70 1 auto;
+  padding: 10px;
+}
+.resto p {
   font-size: 15px;
 }
-.card-content .card-title {
-  grid-column: 1;
-  grid-row: 1;
-}
-.card-content .card-subtitle {
-  grid-column: 1;
-  grid-row: 2;
-}
-.card-content .price {
-  grid-column: 2;
-  grid-row: 2;
+.resto .price {
+  flex: 2 1 auto;
   font-size: 15px;
   color: var(--black-bg-color);
+  align-self: end;
+  margin-right: 1rem;
 }
-.card-content .check {
-  grid-column: 3;
-  grid-row: span 2;
+.resto .check {
+  flex: 0 1 auto;
   align-self: center;
   justify-self: center;
-  display: none;
+  padding: 22px;
+  background-color: var(--secondary-color);
+  margin-right: -72px;
 }
-
-.commander {
+.resto .check i {
+  color: var(--secondary-color);
+  border-radius: 11px;
+  background-color: rgb(255, 255, 255);
+  padding: 4px;
+}
+.resto .commander {
   text-align: center;
 }
 
