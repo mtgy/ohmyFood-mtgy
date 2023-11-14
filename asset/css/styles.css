@@ -301,6 +301,8 @@ a.icon-fav:focus {
   overflow: hidden;
   display: flex;
   box-shadow: 0 0.55rem 0.55rem rgba(0, 0, 0, 0.5);
+  transition-property: transform;
+  transition-duration: 1000ms;
 }
 .resto .card-content a:hover > .check {
   margin-right: 0;

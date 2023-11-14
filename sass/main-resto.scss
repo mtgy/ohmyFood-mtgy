@@ -49,6 +49,8 @@
         overflow: hidden;
         display: flex;
         @include btn-shadow;
+        transition-property: transform;
+        transition-duration: 1000ms;
        &:hover > .check {
           margin-right: 0;
         }
