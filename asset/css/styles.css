@@ -111,12 +111,27 @@ a:visited {
 }
 
 a.icon-fav {
+  justify-self: right;
+}
+a.icon-fav span {
   height: 33px;
   justify-self: right;
-  content: url("../img/heart-regular.svg");
+  transition: all 400ms;
+  position: absolute;
 }
-a.icon-fav:focus {
+a.icon-fav .off {
+  content: url("../img/heart-regular.svg");
+  opacity: 100%;
+}
+a.icon-fav .on {
   content: url("../img/heart-solid.svg");
+  opacity: 0;
+}
+a.icon-fav:hover .on {
+  opacity: 100%;
+}
+a.icon-fav:hover .off {
+  opacity: 0;
 }
 
 .header {
@@ -251,8 +266,7 @@ a.icon-fav:focus {
   width: 100%;
 }
 .card .card-content {
-  display: grid;
-  grid-template-columns: 5fr 1fr;
+  display: flex;
   padding: 1rem;
 }
 

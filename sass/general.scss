@@ -66,10 +66,29 @@ a:visited{
 }
 
 a.icon-fav {
-  height: 33px;
-  justify-self: right;
-  content: url("../img/heart-regular.svg");
-      &:focus {
-          content: url("../img/heart-solid.svg");
-      }  
+     justify-self: right;
+          span {
+               height: 33px;
+               justify-self: right;
+               transition: all 400ms;
+               position: absolute;
+          }
+          .off {     
+               content: url("../img/heart-regular.svg");
+               opacity: 100%;
+       }
+          .on {              
+               content: url("../img/heart-solid.svg"); 
+                opacity: 0;
+       }
+          &:hover {
+                .on {
+                    opacity: 100%;
+                 }
+                .off {
+                     opacity: 0;
+                }
+        }  
 }
+
+
