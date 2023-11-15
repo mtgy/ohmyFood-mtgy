@@ -269,6 +269,12 @@ a.icon-fav:hover .off {
   display: flex;
   padding: 1rem;
 }
+.card .card-content .card-txt {
+  flex: 9;
+}
+.card .card-content .icon-fav {
+  flex: 1;
+}
 
 .resto section {
   max-width: 1200px;

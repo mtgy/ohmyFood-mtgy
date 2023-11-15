@@ -98,9 +98,14 @@
             }
         .card-content {
                 display: flex;
-                
                 padding: 1rem;
-                
+                .card-txt {
+                    flex: 9;
+
+                 }
+                .icon-fav {
+                    flex: 1 ;
+                }
     }
 }
 
