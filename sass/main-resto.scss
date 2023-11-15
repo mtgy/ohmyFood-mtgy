@@ -1,5 +1,11 @@
 
 .resto {
+
+  .image-header img {
+          height: 25rem;
+          object-fit: cover;
+          width: 100%;
+  }
    
     section {
         max-width: 1200px;
@@ -49,8 +55,7 @@
         overflow: hidden;
         display: flex;
         @include btn-shadow;
-        transition-property: transform;
-        transition-duration: 1000ms;
+     
        &:hover > .check {
           margin-right: 0;
         }
@@ -74,6 +79,7 @@
     }
 
         .check{
+          transition: all 400ms;
           flex: 0 1 auto;
           align-self: center;
           justify-self: center;

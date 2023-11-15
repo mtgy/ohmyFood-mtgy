@@ -96,18 +96,21 @@ a:visited {
   font-weight: 500;
   font-size: 16px;
   margin-top: 15px;
-  box-shadow: 0 0.55rem 0.55rem rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.3);
 }
 .btn--gradient {
   background: var(--primary-gradient);
   color: var(--second-bg-color);
+  cursor: pointer;
   border-radius: 25px;
-  transition-property: transform;
-  transition-duration: 1000ms;
+  transition: all 400ms;
 }
 .btn--gradient:hover {
   transform: scale(1.05);
   opacity: 0.8;
+}
+.btn:hover {
+  box-shadow: 0 0.55rem 0.55rem rgba(0, 0, 0, 0.75);
 }
 
 a.icon-fav {
@@ -243,7 +246,10 @@ a.icon-fav:hover .off {
   top: 51px;
   margin-top: -29px;
   right: 21px;
-  box-shadow: 0 0.55rem 0.55rem rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.3);
+}
+.card-tag:hover {
+  box-shadow: 0 0.55rem 0.55rem rgba(0, 0, 0, 0.75);
 }
 
 .card {
@@ -252,7 +258,10 @@ a.icon-fav:hover .off {
   max-width: 360px;
   background-color: var(--second-bg-color);
   border-radius: 12px;
-  box-shadow: 0 0.55rem 0.55rem rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.3);
+}
+.card:hover {
+  box-shadow: 0 0.55rem 0.55rem rgba(0, 0, 0, 0.75);
 }
 @media (min-width: 999px) {
   .card {
@@ -276,6 +285,11 @@ a.icon-fav:hover .off {
   flex: 1;
 }
 
+.resto .image-header img {
+  height: 25rem;
+  object-fit: cover;
+  width: 100%;
+}
 .resto section {
   max-width: 1200px;
   display: block;
@@ -320,9 +334,10 @@ a.icon-fav:hover .off {
   margin: 10px 0;
   overflow: hidden;
   display: flex;
-  box-shadow: 0 0.55rem 0.55rem rgba(0, 0, 0, 0.5);
-  transition-property: transform;
-  transition-duration: 1000ms;
+  box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.3);
+}
+.resto .card-content a:hover {
+  box-shadow: 0 0.55rem 0.55rem rgba(0, 0, 0, 0.75);
 }
 .resto .card-content a:hover > .check {
   margin-right: 0;
@@ -342,6 +357,7 @@ a.icon-fav:hover .off {
   margin-right: 1rem;
 }
 .resto .check {
+  transition: all 400ms;
   flex: 0 1 auto;
   align-self: center;
   justify-self: center;
