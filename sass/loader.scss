@@ -1,9 +1,26 @@
-.loader {
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(250, 250, 250,  .75);
+  z-index: 999;
+  top: 0;
+  overflow: hidden;
+  display: block;
+  animation: disapear 250ms linear 1;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+ 
+    .loader {
+        display: block;
         width: 48px;
         height: 48px;
         border-radius: 50%;
-        position: relative;
-        animation: rotate 1s linear infinite
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        animation: rotate 1s linear infinite;
       }
       .loader::before , .loader::after {
         content: "";
@@ -15,7 +32,7 @@
         animation: prixClipFix 2s linear infinite ;
       }
       .loader::after{
-        border-color: #FF3D00;
+        border-color: var(--primary-color);
         animation: prixClipFix 2s linear infinite , rotate 0.5s linear infinite reverse;
         inset: 6px;
       }
@@ -32,3 +49,14 @@
           75%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 100%)}
           100% {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 0)}
       }
+
+
+      /*animation d'entrée */
+      @keyframes disapear {
+        0%   {opacity: 1; }
+        99%  {opacity: 0; scale: 1;}
+        100%  {scale: 0;}
+      }
+
+
+    }
