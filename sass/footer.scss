@@ -2,14 +2,15 @@ footer {
     background-color: var(--black-bg-color);
     color: var(--second-bg-color);
    padding: 3rem;
-   a { 
+   a {
+    color: white; 
     @media (min-width: 996px) {
         order:1;
         grid-column-end: -1;
             }
 
    }
-   article {
+   div {
     display: grid;
     grid-template-columns: 1fr;
     line-height: 1.5;

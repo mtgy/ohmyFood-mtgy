@@ -475,42 +475,45 @@ footer {
   color: var(--second-bg-color);
   padding: 3rem;
 }
+footer a {
+  color: white;
+}
 @media (min-width: 996px) {
   footer a {
     order: 1;
     grid-column-end: -1;
   }
 }
-footer article {
+footer div {
   display: grid;
   grid-template-columns: 1fr;
   line-height: 1.5;
 }
 @media (min-width: 996px) {
-  footer article {
+  footer div {
     grid-template-columns: 10fr 1fr 130px;
   }
 }
-footer article img {
+footer div img {
   max-width: 130px;
 }
 @media (min-width: 996px) {
-  footer article img {
+  footer div img {
     float: right;
   }
 }
 @media (min-width: 996px) {
-  footer article ul {
+  footer div ul {
     display: inline-flex;
     justify-self: right;
   }
 }
 @media (min-width: 996px) {
-  footer article li {
+  footer div li {
     margin: 0 1rem;
   }
 }
-footer article i {
+footer div i {
   margin-right: 1rem;
 }
 
