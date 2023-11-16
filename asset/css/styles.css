@@ -96,7 +96,7 @@ a:visited {
   font-weight: 500;
   font-size: 16px;
   margin-top: 15px;
-  box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0.55rem 0.55rem rgba(0, 0, 0, 0.5);
 }
 .btn--gradient {
   background: var(--primary-gradient);
@@ -104,13 +104,14 @@ a:visited {
   cursor: pointer;
   border-radius: 25px;
   transition: all 400ms;
+  box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.3);
+}
+.btn--gradient:hover {
+  box-shadow: 0 0.55rem 0.55rem rgba(0, 0, 0, 0.75);
 }
 .btn--gradient:hover {
   transform: scale(1.05);
   opacity: 0.8;
-}
-.btn:hover {
-  box-shadow: 0 0.55rem 0.55rem rgba(0, 0, 0, 0.75);
 }
 
 a.icon-fav {
@@ -246,10 +247,7 @@ a.icon-fav:hover .off {
   top: 51px;
   margin-top: -29px;
   right: 21px;
-  box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.3);
-}
-.card-tag:hover {
-  box-shadow: 0 0.55rem 0.55rem rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0.55rem 0.55rem rgba(0, 0, 0, 0.5);
 }
 
 .card {
@@ -259,9 +257,6 @@ a.icon-fav:hover .off {
   background-color: var(--second-bg-color);
   border-radius: 12px;
   box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.3);
-}
-.card:hover {
-  box-shadow: 0 0.55rem 0.55rem rgba(0, 0, 0, 0.75);
 }
 @media (min-width: 999px) {
   .card {
@@ -289,6 +284,8 @@ a.icon-fav:hover .off {
   height: 25rem;
   object-fit: cover;
   width: 100%;
+  position: relative;
+  z-index: -2;
 }
 .resto section {
   max-width: 1200px;
@@ -336,15 +333,13 @@ a.icon-fav:hover .off {
   display: flex;
   box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.3);
 }
-.resto .card-content a:hover {
-  box-shadow: 0 0.55rem 0.55rem rgba(0, 0, 0, 0.75);
-}
 .resto .card-content a:hover > .check {
   margin-right: 0;
 }
 .resto .card-txt {
   flex: 70 1 auto;
   padding: 10px;
+  min-width: 10px;
 }
 .resto p {
   font-size: 15px;

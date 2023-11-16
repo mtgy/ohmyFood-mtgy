@@ -75,7 +75,7 @@
         top: 51px;
         margin-top: -29px;
         right: 21px;
-        @include btn-shadow;
+        @include shadow-long;
     }  
     .card {
         justify-self: center;
@@ -83,7 +83,7 @@
         max-width: 360px;
         background-color: var(--second-bg-color);
         border-radius: 12px;
-        @include btn-shadow;
+        @include shadow;
 
         @media (min-width: 999px) {
             max-width: 570px;

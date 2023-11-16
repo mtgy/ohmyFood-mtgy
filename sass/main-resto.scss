@@ -5,6 +5,8 @@
           height: 25rem;
           object-fit: cover;
           width: 100%;
+          position: relative;
+      z-index: -2;
   }
    
     section {
@@ -54,7 +56,7 @@
         margin: 10px 0;
         overflow: hidden;
         display: flex;
-        @include btn-shadow;
+        @include shadow;
      
        &:hover > .check {
           margin-right: 0;
@@ -64,6 +66,7 @@
       .card-txt {
         flex: 70 1 auto;
         padding: 10px;
+        min-width: 10px;
        }
       p {
         font-size: 15px;

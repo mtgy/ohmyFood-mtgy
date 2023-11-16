@@ -52,6 +52,7 @@ a:visited{
               cursor:pointer;
               border-radius: 25px;
               transition: all 400ms;
+              @include btn-shadow;
               
               &:hover {
                 transform: scale(1.05);
@@ -64,7 +65,7 @@ a:visited{
   font-weight: 500;
   font-size: 16px;
   margin-top: 15px;
-  @include btn-shadow;
+  @include shadow-long;
 }
 
 a.icon-fav {
