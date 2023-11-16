@@ -400,6 +400,16 @@ a.icon-fav:hover .off {
   max-width: 590px;
   margin-left: auto;
   margin-right: auto;
+  animation: appear 2s linear 1;
+  animation-fill-mode: forwards;
+}
+.resto article.plat {
+  animation-delay: 1s;
+  opacity: 0;
+}
+.resto article.dessert {
+  animation-delay: 2s;
+  opacity: 0;
 }
 .resto .card-content a {
   background-color: var(--second-bg-color);
@@ -450,6 +460,14 @@ a.icon-fav:hover .off {
 }
 .resto .commander {
   text-align: center;
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 footer {
