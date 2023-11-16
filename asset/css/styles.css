@@ -337,9 +337,15 @@ a.icon-fav:hover .off {
   margin-right: 0;
 }
 .resto .card-txt {
-  flex: 70 1 auto;
+  flex: 68;
   padding: 10px;
-  min-width: 10px;
+  min-width: 0;
+}
+.resto .card-txt > * {
+  flex-basis: 100px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .resto p {
   font-size: 15px;
