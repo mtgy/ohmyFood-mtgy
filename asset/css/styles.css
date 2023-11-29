@@ -47,18 +47,18 @@ td, th {
 :root {
   --main-bg-color: #F6F6F6;
   --second-bg-color: white;
-  --third-bg-color: rgb(0, 0, 0, 0.1);
-  --grey-bg-color:#7E7E7E;
-  --black-bg-color:#353535;
-  --primary-color:#9356DC;
+  --third-bg-color: rgba(0, 0, 0, 0.1);
+  --grey-bg-color: #7E7E7E;
+  --black-bg-color: #353535;
+  --primary-color: #9356DC;
   --secondary-color: #99E2D0;
   --secondary-color-darker: #008766;
-  --primary-gradient: linear-gradient(7deg, var(--primary-color) 0%, rgba(255,121,218,1) 100%);
+  --primary-gradient: linear-gradient(7deg, var(--primary-color) 0%, rgba(255, 121, 218, 1) 100%);
 }
 
 body {
   font-family: "Roboto", sans-serif;
-  /*  font-family: 'Shrikhand', serif; */
+  /* font-family: 'Shrikhand', serif; */
 }
 
 h1 {
@@ -85,7 +85,6 @@ a {
   text-decoration: none;
   color: black;
 }
-
 a:visited {
   color: inherit;
 }
@@ -124,18 +123,18 @@ a.icon-fav span {
   transition: all 400ms;
   position: absolute;
 }
-a.icon-fav .off {
+a.icon-fav span .off {
   content: url("../img/heart-regular.svg");
   opacity: 100%;
 }
-a.icon-fav .on {
+a.icon-fav span .on {
   content: url("../img/heart-solid.svg");
   opacity: 0;
 }
-a.icon-fav:hover .on {
+a.icon-fav span:hover .on {
   opacity: 100%;
 }
-a.icon-fav:hover .off {
+a.icon-fav span:hover .off {
   opacity: 0;
 }
 
@@ -218,8 +217,7 @@ a.icon-fav:hover .off {
 .header {
   text-align: center;
   background-color: var(--second-bg-color);
-  /* bouton retour du header */
-  box-shadow: 0 0.55rem 0.55rem rgba(0, 0, 0, 0.5);
+  /* Bouton retour du header */
 }
 .header__img {
   padding: 1rem 0;
@@ -229,6 +227,7 @@ a.icon-fav:hover .off {
   margin: 1.5rem;
   font-size: 21px;
   color: var(--black-bg-color);
+  box-shadow: 0 0.55rem 0.55rem rgba(0, 0, 0, 0.5);
 }
 
 .location {
@@ -273,12 +272,12 @@ a.icon-fav:hover .off {
 }
 @media (min-width: 768px) {
   .fonctionnement {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (min-width: 999px) {
   .fonctionnement {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 .fonctionnement__btn {
@@ -310,7 +309,7 @@ a.icon-fav:hover .off {
 }
 @media (min-width: 768px) {
   .container {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem 6rem;
   }
 }
@@ -367,23 +366,20 @@ a.icon-fav:hover .off {
 .resto section {
   max-width: 1200px;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 42px 42px 0 0;
-  margin-top: -4rem;
-  position: relative;
+  margin: -4rem auto 0;
   padding: 2.2rem 1rem;
+  border-radius: 42px 42px 0 0;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .resto section {
+    max-width: 460px;
+    margin: -4rem auto 0;
+  }
 }
 .resto-title {
   display: grid;
   grid-template-columns: 5fr 1fr;
-}
-@media (min-width: 768px) {
-  .resto-title {
-    max-width: 460px;
-    margin-right: auto;
-    margin-left: auto;
-  }
 }
 .resto-title h1 {
   font-family: "Shrikhand", serif;
@@ -399,8 +395,7 @@ a.icon-fav:hover .off {
 .resto article {
   margin-top: 2rem;
   max-width: 590px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 2rem auto 0;
   animation: appear 2s linear 1;
   animation-fill-mode: forwards;
 }

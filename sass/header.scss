@@ -1,32 +1,31 @@
 .header {
     text-align: center;
-    background-color:  var(--second-bg-color);
+    background-color: var(--second-bg-color);
+  
     &__img {
-        padding:  1rem 0;
+      padding: 1rem 0;
     }
-   
-   
-    /* bouton retour du header */
-
+  
+    /* Bouton retour du header */
     .btn-return {
-            position: absolute;
-            margin: 1.5rem;
-            font-size: 21px;
-            color: var(--black-bg-color);
+      position: absolute;
+      margin: 1.5rem;
+      font-size: 21px;
+      color: var(--black-bg-color);
+      @include shadow-long;
     }
-    @include shadow-long;
-}
-
-
-
-.location {
+  }
+  
+  .location {
     display: flex;
     width: 100%;
     align-items: center;
     justify-content: center;
     padding: 1rem 0;
     background-color: var(--third-bg-color);
+  
     &__i {
-        padding: 0 1rem ;
+      padding: 0 1rem;
     }
-}
+  }
+  

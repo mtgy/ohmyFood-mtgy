@@ -1,21 +1,18 @@
-
 :root {
-    --main-bg-color: #F6F6F6;
-    --second-bg-color: white;
-    --third-bg-color: rgb(0, 0, 0, 0.1);
-    --grey-bg-color:#7E7E7E;
-    --black-bg-color:#353535;
-
-    --primary-color:#9356DC;
-    --secondary-color: #99E2D0;
-    --secondary-color-darker: #008766;
-
-    --primary-gradient: linear-gradient(7deg, var(--primary-color) 0%, rgba(255,121,218,1) 100%); 
-  }
+  --main-bg-color: #F6F6F6;
+  --second-bg-color: white;
+  --third-bg-color: rgba(0, 0, 0, 0.1);
+  --grey-bg-color: #7E7E7E;
+  --black-bg-color: #353535;
+  --primary-color: #9356DC;
+  --secondary-color: #99E2D0;
+  --secondary-color-darker: #008766;
+  --primary-gradient: linear-gradient(7deg, var(--primary-color) 0%, rgba(255, 121, 218, 1) 100%);
+}
 
 body {
-      font-family: 'Roboto', sans-serif;
-  /*  font-family: 'Shrikhand', serif; */
+  font-family: 'Roboto', sans-serif;
+  /* font-family: 'Shrikhand', serif; */
 }
 
 h1 {
@@ -27,11 +24,12 @@ h1 {
 h2 {
   font-weight: 300;
 }
+
 h3 {
   font-weight: 700;
-
   line-height: 1.5;
 }
+
 p {
   font-weight: 300;
   font-size: 17px;
@@ -41,58 +39,62 @@ a {
   text-decoration: none;
   color: black;
 
+  &:visited {
+    color: inherit;
+  }
 }
-a:visited{
-  color: inherit;
- }
+
 .btn {
   background-color: var(--main-bg-color);
-  &--gradient{
-              background: var(--primary-gradient);
-              color: var(--second-bg-color);
-              cursor:pointer;
-              border-radius: 25px;
-              transition: all 400ms;
-              @include btn-shadow;
-              
-              &:hover {
-                transform: scale(1.05);
-                opacity: 0.8;
-              
-            }
-            }
   padding: 15px 35px;
   border: 0;
   font-weight: 500;
   font-size: 16px;
   margin-top: 15px;
+
+  &--gradient {
+    background: var(--primary-gradient);
+    color: var(--second-bg-color);
+    cursor: pointer;
+    border-radius: 25px;
+    transition: all 400ms;
+    @include btn-shadow;
+
+    &:hover {
+      transform: scale(1.05);
+      opacity: 0.8;
+    }
+  }
+
   @include shadow-long;
 }
 
 a.icon-fav {
-     justify-self: right;
-          span {
-               height: 33px;
-               justify-self: right;
-               transition: all 400ms;
-               position: absolute;
-          }
-          .off {     
-               content: url("../img/heart-regular.svg");
-               opacity: 100%;
-       }
-          .on {              
-               content: url("../img/heart-solid.svg"); 
-                opacity: 0;
-       }
-          &:hover {
-                .on {
-                    opacity: 100%;
-                 }
-                .off {
-                     opacity: 0;
-                }
-        }  
+  justify-self: right;
+
+  span {
+    height: 33px;
+    justify-self: right;
+    transition: all 400ms;
+    position: absolute;
+
+    .off {
+      content: url("../img/heart-regular.svg");
+      opacity: 100%;
+    }
+
+    .on {
+      content: url("../img/heart-solid.svg");
+      opacity: 0;
+    }
+
+    &:hover {
+      .on {
+        opacity: 100%;
+      }
+      .off {
+        opacity: 0;
+      }
+    }
+  }
 }
-
-

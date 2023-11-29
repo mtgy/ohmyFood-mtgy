@@ -1,111 +1,119 @@
 .section {
-        padding: 3rem ;      
-        &--txt-center{
-            text-align: center;
-        }
-        &--bg-gris {
-            background-color: var(--main-bg-color);
-        }
-
-        @media (min-width: 768px) {
-                    padding: 3rem;
-        }
-        
-        @media (min-width: 999px) {
-                    padding: 3rem 2rem;
-        }
-
-        @media (min-width: 1280px) {
-                    padding: 3rem 11rem;
-        }
- }
-
-
-.fonctionnement {
-    display: grid;
-   
-    @media (min-width: 768px) {
-        grid-template-columns: 1fr 1fr ;
-            }
+    padding: 3rem;
     
-    @media (min-width: 999px) {
-    grid-template-columns: 1fr 1fr 1fr;
-        }
-
-    &__btn {
-        background-color: var(--main-bg-color);
-        border-radius: 15px;
-        display: inline-flex;
-        align-items: center;
-        justify-self: center;
-        width: 290px;
-        &__item {
-            margin: 0 9px;
-        }
-        span {
-            border-radius: 20px;
-            background-color: var(--primary-color);
-            padding: 3px 9px;
-            color: var(--second-bg-color);
-            margin-left: -50px;
-
-        }
-        i {
-            color: var(--grey-bg-color);
-        }
+    &--txt-center {
+      text-align: center;
     }
- }
-
-.container {
+  
+    &--bg-gris {
+      background-color: var(--main-bg-color);
+    }
+  
+    @media (min-width: 768px) {
+      padding: 3rem;
+    }
+  
+    @media (min-width: 999px) {
+      padding: 3rem 2rem;
+    }
+  
+    @media (min-width: 1280px) {
+      padding: 3rem 11rem;
+    }
+  }
+  
+  .fonctionnement {
+    display: grid;
+  
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    @media (min-width: 999px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  
+    &__btn {
+      background-color: var(--main-bg-color);
+      border-radius: 15px;
+      display: inline-flex;
+      align-items: center;
+      justify-self: center;
+      width: 290px;
+  
+      &__item {
+        margin: 0 9px;
+      }
+  
+      span {
+        border-radius: 20px;
+        background-color: var(--primary-color);
+        padding: 3px 9px;
+        color: var(--second-bg-color);
+        margin-left: -50px;
+      }
+  
+      i {
+        color: var(--grey-bg-color);
+      }
+    }
+  }
+  
+  .container {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
-
+  
     @media (min-width: 768px) {
-        grid-template-columns: 1fr 1fr ;
-        gap:  2rem 6rem
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem 6rem;
     }
-   }
-    .card-tag {
-        background-color: var(--secondary-color);
-        color: var(--secondary-color-darker);
-        padding: 5px 12px;
-        position: relative;
-        float: right;
-        top: 51px;
-        margin-top: -29px;
-        right: 21px;
-        @include shadow-long;
-    }  
-    .card {
-        justify-self: center;
-        width: 100%;
-        max-width: 360px;
-        background-color: var(--second-bg-color);
-        border-radius: 12px;
-        @include shadow;
-
-        @media (min-width: 999px) {
-            max-width: 570px;
-        }
-            
-        .card-img {
-                border-radius: 12px 12px 0px 0px;
-                 object-fit: cover;
-                 height: 180px;
-                 width: 100%;
-
-            }
-        .card-content {
-                display: flex;
-                padding: 1rem;
-                .card-txt {
-                    flex: 9;
-
-                 }
-                .icon-fav {
-                    flex: 1 ;
-                }
+  }
+  
+  .card-tag {
+    background-color: var(--secondary-color);
+    color: var(--secondary-color-darker);
+    padding: 5px 12px;
+    position: relative;
+    float: right;
+    top: 51px;
+    margin-top: -29px;
+    right: 21px;
+  
+    @include shadow-long;
+  }
+  
+  .card {
+    justify-self: center;
+    width: 100%;
+    max-width: 360px;
+    background-color: var(--second-bg-color);
+    border-radius: 12px;
+  
+    @include shadow;
+  
+    @media (min-width: 999px) {
+      max-width: 570px;
     }
-}
-
+  
+    .card-img {
+      border-radius: 12px 12px 0px 0px;
+      object-fit: cover;
+      height: 180px;
+      width: 100%;
+    }
+  
+    .card-content {
+      display: flex;
+      padding: 1rem;
+  
+      .card-txt {
+        flex: 9;
+      }
+  
+      .icon-fav {
+        flex: 1;
+      }
+    }
+  }
+  

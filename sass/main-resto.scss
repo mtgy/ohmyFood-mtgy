@@ -1,131 +1,128 @@
-
 .resto {
-
   .image-header img {
-          height: 25rem;
-          object-fit: cover;
-          width: 100%;
-          position: relative;
-      z-index: -2;
+    height: 25rem;
+    object-fit: cover;
+    width: 100%;
+    position: relative;
+    z-index: -2;
   }
-   
-    section {
-        max-width: 1200px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        border-radius: 42px 42px 0 0;
-        margin-top: -4rem;
-        position: relative;
-        padding: 2.2rem 1rem;
 
+  section {
+    max-width: 1200px;
+    display: block;
+    margin: -4rem auto 0;
+    padding: 2.2rem 1rem;
+    border-radius: 42px 42px 0 0;
+    position: relative;
+
+    @media (min-width: 768px) {
+      max-width: 460px;
+      margin: -4rem auto 0;
+    }
+  }
+
+  &-title {
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+
+    h1 {
+      font-family: 'Shrikhand', serif;
+      font-weight: 500;
+    }
+  }
+
+  h2 {
+    font-size: 16px;
+    text-transform: uppercase;
+    border-bottom: solid 2px var(--secondary-color);
+    width: 40px;
+    padding-bottom: 5px;
+  }
+
+  article {
+    margin-top: 2rem;
+    max-width: 590px;
+    margin: 2rem auto 0;
+    animation: appear 2s linear 1;
+    animation-fill-mode: forwards;
+
+    &.plat {
+      animation-delay: 1s;
+      opacity: 0;
     }
 
-    &-title {
-            display: grid;
-            grid-template-columns: 5fr 1fr;
-            @media (min-width: 768px) {
-                     max-width: 460px;
-                     margin-right: auto;
-                        margin-left: auto;
-            }
-            h1 {
-                font-family: 'Shrikhand', serif;
-                font-weight: 500;
-            }
+    &.dessert {
+      animation-delay: 2s;
+      opacity: 0;
+    }
+  }
 
+  .card-content a {
+    background-color: var(--second-bg-color);
+    border-radius: 15px;
+    margin: 10px 0;
+    overflow: hidden;
+    display: flex;
+    @include shadow;
+
+    &:hover > .check {
+      margin-right: 0;
+    }
+  }
+
+  .card-txt {
+    flex: 68;
+    padding: 10px;
+    min-width: 0;
+
+    & > * {
+      flex-basis: 100px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  .price {
+    flex: 2 1 auto;
+    font-size: 15px;
+    color: var(--black-bg-color);
+    align-self: end;
+    margin-right: 1rem;
+  }
+
+  .check {
+    transition: all 400ms;
+    flex: 0 1 auto;
+    align-self: center;
+    justify-self: center;
+    padding: 22px;
+    background-color: var(--secondary-color);
+
+    i {
+      color: var(--secondary-color);
+      border-radius: 11px;
+      background-color: rgb(255, 255, 255);
+      padding: 4px;
     }
 
-    h2 {
-        font-size: 16px;
-        text-transform: uppercase;
-        border-bottom: solid 2px  var(--secondary-color);
-        width: 40px;
-      padding-bottom: 5px;
+    margin-right: -72px;
+  }
+
+  .commander {
+    text-align: center;
+  }
+
+  @keyframes appear {
+    0% {
+      opacity: 0;
     }
-
-    article {
-        margin-top: 2rem;
-        max-width: 590px;
-        margin-left: auto;
-        margin-right: auto;  
-        animation: appear 2s linear 1;
-        animation-fill-mode: forwards;
-       &.plat {
-        animation-delay: 1s;
-        opacity: 0;
-       }
-
-       &.dessert {
-        animation-delay: 2s;
-        opacity: 0;
-       }
+    100% {
+      opacity: 1;
     }
-
-    .card-content a {
-        background-color: var( --second-bg-color);
-        border-radius: 15px;
-        margin: 10px 0;
-        overflow: hidden;
-        display: flex;
-        @include shadow;
-     
-       &:hover > .check {
-          margin-right: 0;
-        }
-    
-    }
-      .card-txt {
-        flex: 68;
-        padding: 10px;
-        min-width: 0;
-          & > * {       
-         flex-basis: 100px;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow: hidden;
-
-       }
-      }
-      p {
-        
-        font-size: 15px;
-      }
-   
-
-        .price{
-          flex: 2 1 auto;
-        font-size: 15px;
-        color: var( --black-bg-color);
-        align-self: end;
-        margin-right: 1rem;
-    }
-
-        .check{
-          transition: all 400ms;
-          flex: 0 1 auto;
-          align-self: center;
-          justify-self: center;
-          padding: 22px;
-          background-color: var(--secondary-color);
-          i {
-            color:var(--secondary-color);
-            border-radius: 11px;
-            background-color: rgb(255, 255, 255);
-           padding: 4px;
-            }
-            margin-right: -72px;
-
-          
-         }
-        
-.commander {
-text-align: center;
-}
-
-      
-      @keyframes appear {
-        0%   {opacity: 0; }
-        100%   {opacity: 1; }
-      }
+  }
 }
