@@ -47,18 +47,18 @@ td, th {
 :root {
   --main-bg-color: #F6F6F6;
   --second-bg-color: white;
-  --third-bg-color: rgba(0, 0, 0, 0.1);
-  --grey-bg-color: #7E7E7E;
-  --black-bg-color: #353535;
-  --primary-color: #9356DC;
+  --third-bg-color: rgb(0, 0, 0, 0.1);
+  --grey-bg-color:#7E7E7E;
+  --black-bg-color:#353535;
+  --primary-color:#9356DC;
   --secondary-color: #99E2D0;
   --secondary-color-darker: #008766;
-  --primary-gradient: linear-gradient(7deg, var(--primary-color) 0%, rgba(255, 121, 218, 1) 100%);
+  --primary-gradient: linear-gradient(7deg, var(--primary-color) 0%, rgba(255,121,218,1) 100%);
 }
 
 body {
   font-family: "Roboto", sans-serif;
-  /* font-family: 'Shrikhand', serif; */
+  /*  font-family: 'Shrikhand', serif; */
 }
 
 h1 {
@@ -85,6 +85,7 @@ a {
   text-decoration: none;
   color: black;
 }
+
 a:visited {
   color: inherit;
 }
@@ -114,27 +115,24 @@ a:visited {
   opacity: 0.8;
 }
 
-a.icon-fav {
-  justify-self: right;
-}
 a.icon-fav span {
   height: 33px;
   justify-self: right;
   transition: all 400ms;
   position: absolute;
 }
-a.icon-fav span .off {
+a.icon-fav .off {
   content: url("../img/heart-regular.svg");
   opacity: 100%;
 }
-a.icon-fav span .on {
+a.icon-fav .on {
   content: url("../img/heart-solid.svg");
   opacity: 0;
 }
-a.icon-fav span:hover .on {
+a.icon-fav:hover .on {
   opacity: 100%;
 }
-a.icon-fav span:hover .off {
+a.icon-fav:hover .off {
   opacity: 0;
 }
 
@@ -364,7 +362,6 @@ a.icon-fav span:hover .off {
   z-index: -2;
 }
 .resto section {
-  max-width: 1200px;
   display: block;
   margin: -4rem auto 0;
   padding: 2.2rem 1rem;
@@ -377,9 +374,14 @@ a.icon-fav span:hover .off {
     margin: -4rem auto 0;
   }
 }
+@media (min-width: 999px) {
+  .resto section {
+    max-width: 1200px;
+  }
+}
 .resto-title {
   display: grid;
-  grid-template-columns: 5fr 1fr;
+  grid-template-columns: 9fr 1fr;
 }
 .resto-title h1 {
   font-family: "Shrikhand", serif;
