@@ -216,6 +216,7 @@ a.icon-fav:hover .off {
   text-align: center;
   background-color: var(--second-bg-color);
   /* Bouton retour du header */
+  box-shadow: 0 0.55rem 0.55rem rgba(0, 0, 0, 0.5);
 }
 .header__img {
   padding: 1rem 0;
@@ -225,7 +226,6 @@ a.icon-fav:hover .off {
   margin: 1.5rem;
   font-size: 21px;
   color: var(--black-bg-color);
-  box-shadow: 0 0.55rem 0.55rem rgba(0, 0, 0, 0.5);
 }
 
 .location {
@@ -381,7 +381,14 @@ a.icon-fav:hover .off {
 }
 .resto-title {
   display: grid;
-  grid-template-columns: 9fr 1fr;
+  grid-template-columns: 5fr 1fr;
+}
+@media (min-width: 768px) {
+  .resto-title {
+    max-width: 460px;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 .resto-title h1 {
   font-family: "Shrikhand", serif;

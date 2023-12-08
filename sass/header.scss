@@ -12,8 +12,9 @@
       margin: 1.5rem;
       font-size: 21px;
       color: var(--black-bg-color);
-      @include shadow-long;
+    
     }
+    @include shadow-long;
   }
   
   .location {
