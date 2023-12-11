@@ -521,7 +521,8 @@ footer div img {
   }
 }
 footer div i {
-  margin-right: 1rem;
+  margin-right: 0.5rem;
+  width: 20px;
 }
 
 /*# sourceMappingURL=styles.css.map */
