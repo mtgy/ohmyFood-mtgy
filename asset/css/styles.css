@@ -298,6 +298,9 @@ a.icon-fav:hover .off {
 .fonctionnement__btn i {
   color: var(--grey-bg-color);
 }
+.fonctionnement__btn .fa-store {
+  color: var(--primary-color);
+}
 
 .container {
   display: grid;
